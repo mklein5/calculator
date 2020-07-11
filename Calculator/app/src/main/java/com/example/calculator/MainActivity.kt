@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         //Listener
         val listener = View.OnClickListener { v ->
 
-            //TODO: Clean up button creation/make function to make code more resuable
+            //TODO: Clean up button creation/make function to make code more reusable
             val b = v as Button
             if(b.text == "C"){
                 newNumber.text.clear()
@@ -117,7 +117,7 @@ class MainActivity : AppCompatActivity() {
                 operand2 = ""
                 pendingOperation = ""
 
-                //TODO: Fix?
+                //TODO: Fix to clear, to improve looks not fucntionality
                 //displayOperation.text.clear()
             }
 
@@ -135,7 +135,6 @@ class MainActivity : AppCompatActivity() {
                     }
                     else{
                         result.text = "Error"
-
                         operand1 = ""
                         operand2 = ""
                         pendingOperation = ""
