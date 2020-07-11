@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var result: EditText
+    private lateinit var result: TextView
     private lateinit var newNumber: EditText
     private val displayOperation by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operation)}
 
@@ -49,10 +49,11 @@ class MainActivity : AppCompatActivity() {
         //Listener
         val listener = View.OnClickListener { v ->
 
-            //TODO: Clean up button creation/make function to make code more resuable
+            //TODO: Clean up button creation/make function to make code more reusable
             val b = v as Button
             if(b.text == "C"){
                 newNumber.text.clear()
+                result.text = ""
                 if(dec == true){
                     dec = false
                 }
@@ -88,6 +89,8 @@ class MainActivity : AppCompatActivity() {
         val opListener = View.OnClickListener { v ->
             val op = (v as Button).text.toString()
             val value = newNumber.text.toString()
+
+
             if (value.isNotEmpty()){
                 performOperation(value, op)
             }
@@ -104,9 +107,47 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun performOperation(value: String, operation: String){
-        displayOperation.text = operation
+        newNumber.text.clear()
+
         if(operand1.isEmpty()) {
             operand1 = value
+            result.text = operand1
+            if(operation == "="){
+                operand1 = ""
+                operand2 = ""
+                pendingOperation = ""
+
+                //TODO: Fix to clear, to improve looks not fucntionality
+                //displayOperation.text.clear()
+            }
+
+        }
+        else{
+            operand2 = value
+
+            when(pendingOperation){
+                "+" -> result.text = (operand1.toDouble() + operand2.toDouble()).toString()
+                "-" -> result.text = (operand1.toDouble() - operand2.toDouble()).toString()
+                "*" -> result.text = (operand1.toDouble() * operand2.toDouble()).toString()
+                else -> {
+                    if(operand2.toDouble() != 0.0){
+                       result.text = (operand1.toDouble() / operand2.toDouble()).toString()
+                    }
+                    else{
+                        result.text = "Error"
+                        operand1 = ""
+                        operand2 = ""
+                        pendingOperation = ""
+                    }
+                }
+            }
+
+
+            if(operation == "="){
+                operand1 = ""
+                operand2 = ""
+                pendingOperation = ""
+            }
         }
     }
 }
