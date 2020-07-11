@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
     private val displayOperation by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operation)}
 
     //Variables to hold operands and type of calculation
-    private var operand1: Double? = null
-    private var operand2: Double = 0.0
+    private var operand1: String = ""
+    private var operand2: String = ""
     private var pendingOperation = "="
     private var dec: Boolean = false
 
@@ -84,5 +84,29 @@ class MainActivity : AppCompatActivity() {
         button9.setOnClickListener(listener)
         buttonDec.setOnClickListener(listener)
         buttonClear.setOnClickListener(listener)
+
+        val opListener = View.OnClickListener { v ->
+            val op = (v as Button).text.toString()
+            val value = newNumber.text.toString()
+            if (value.isNotEmpty()){
+                performOperation(value, op)
+            }
+
+            pendingOperation = op
+            displayOperation.text = pendingOperation
+        }
+
+        buttonEquals.setOnClickListener(opListener)
+        buttonDivide.setOnClickListener(opListener)
+        buttonMinus.setOnClickListener(opListener)
+        buttonMultiply.setOnClickListener(opListener)
+        buttonPlus.setOnClickListener(opListener)
+    }
+
+    private fun performOperation(value: String, operation: String){
+        displayOperation.text = operation
+        if(operand1.isEmpty()) {
+            operand1 = value
+        }
     }
 }
