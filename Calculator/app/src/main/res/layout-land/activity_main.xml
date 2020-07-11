@@ -11,12 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:inputType="numberSigned"
         android:ems="10"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,10 +24,9 @@
         android:id="@+id/button0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="0"
-        app:layout_constraintStart_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/newNumber"
+        app:layout_constraintStart_toStartOf="@+id/button1" />
 
     <Button
         android:id="@+id/button9"
@@ -57,16 +56,6 @@
         app:layout_constraintStart_toEndOf="@+id/button6" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="112dp"
-        android:text="7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newNumber" />
-
-    <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,6 +72,15 @@
         android:text="-"
         app:layout_constraintBaseline_toBaselineOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="296dp"
+        android:text="7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/result"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button6"
@@ -169,34 +167,21 @@
         android:id="@+id/operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="88dp"
         android:text="operation"
-        app:layout_constraintEnd_toStartOf="@+id/newNumber"
-        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/newNumber" />
+        tools:layout_editor_absoluteY="241dp" />
 
     <EditText
         android:id="@+id/newNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
+        android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="@+id/result"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/result"
         app:layout_constraintTop_toBottomOf="@+id/result" />
-
-    <Button
-        android:id="@+id/buttonClear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="8dp"
-        android:text="C"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
