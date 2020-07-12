@@ -184,4 +184,13 @@
         app:layout_constraintStart_toStartOf="@+id/result"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="296dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

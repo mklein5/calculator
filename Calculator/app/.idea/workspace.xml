@@ -5,9 +5,16 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="603f642b-58c0-41c7-903c-600305d68868" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculator/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculator/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout-land/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout-land/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,22 +124,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom" timestamp="1593639417374">
+    <state width="1398" height="56" key="GridCell.Tab.0.bottom" timestamp="1594585652650">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1593639417374" />
-    <state width="1398" height="230" key="GridCell.Tab.0.center" timestamp="1593639417367">
+    <state width="1398" height="56" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594585652650" />
+    <state width="1398" height="56" key="GridCell.Tab.0.center" timestamp="1594585652650">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1593639417367" />
-    <state width="1398" height="230" key="GridCell.Tab.0.left" timestamp="1593639417365">
+    <state width="1398" height="56" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594585652650" />
+    <state width="1398" height="56" key="GridCell.Tab.0.left" timestamp="1594585652647">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1593639417365" />
-    <state width="1398" height="230" key="GridCell.Tab.0.right" timestamp="1593639417369">
+    <state width="1398" height="56" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594585652647" />
+    <state width="1398" height="56" key="GridCell.Tab.0.right" timestamp="1594585652650">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1593639417369" />
+    <state width="1398" height="56" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594585652650" />
+    <state x="100" y="123" width="1240" height="677" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1594583851745">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1440.877@0.23.1440.877" timestamp="1594583851745" />
     <state x="390" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1593639571079">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
