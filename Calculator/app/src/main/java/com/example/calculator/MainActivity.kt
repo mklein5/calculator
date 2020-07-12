@@ -54,6 +54,8 @@ class MainActivity : AppCompatActivity() {
             if(b.text == "C"){
                 newNumber.text.clear()
                 result.text = ""
+                operand1 = ""
+                operand2 = ""
                 if(dec == true){
                     dec = false
                 }
@@ -126,12 +128,26 @@ class MainActivity : AppCompatActivity() {
             operand2 = value
 
             when(pendingOperation){
-                "+" -> result.text = (operand1.toDouble() + operand2.toDouble()).toString()
-                "-" -> result.text = (operand1.toDouble() - operand2.toDouble()).toString()
-                "*" -> result.text = (operand1.toDouble() * operand2.toDouble()).toString()
+                "+" -> {
+                    result.text = (operand1.toDouble() + operand2.toDouble()).toString()
+                    operand1 = (operand1.toDouble() + operand2.toDouble()).toString()
+                    operand2 = ""
+                }
+                "-" -> {
+                    result.text = (operand1.toDouble() - operand2.toDouble()).toString()
+                    operand1 = (operand1.toDouble() - operand2.toDouble()).toString()
+                    operand2 = ""
+                }
+                "*" -> {
+                    result.text = (operand1.toDouble() * operand2.toDouble()).toString()
+                    operand1 = (operand1.toDouble() * operand2.toDouble()).toString()
+                    operand2 = ""
+                }
                 else -> {
                     if(operand2.toDouble() != 0.0){
-                       result.text = (operand1.toDouble() / operand2.toDouble()).toString()
+                        result.text = (operand1.toDouble() / operand2.toDouble()).toString()
+                        operand1 = (operand1.toDouble() / operand2.toDouble()).toString()
+                        operand2 = ""
                     }
                     else{
                         result.text = "Error"
